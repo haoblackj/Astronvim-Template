@@ -1,8 +1,8 @@
--- 依存プラグインの設定
-require('packer').startup(function()
-  use {'vim-denops/denops.vim', opt = false}
-  use {'lambdalisue/kensaku-search.vim', opt = false}
-  use {'lambdalisue/kensaku.vim', opt = false}
+-- プラグインの設定
+require('lazy').setup(function(use)
+  use {'vim-denops/denops.vim'}
+  use {'lambdalisue/kensaku-search.vim'}
+  use {'lambdalisue/kensaku.vim'}
 end)
 
 -- キーマッピングの設定
@@ -20,7 +20,7 @@ vim.cmd('let g:clever_f_use_migemo = 1')
 -- mini.surroundの設定
 require('mini.surround').setup({
   mappings = {
-    highlight = 'sx', 
+    highlight = 'sx',
   },
   custom_surroundings = {
     ['j'] = {
